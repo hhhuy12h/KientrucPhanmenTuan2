@@ -10,4 +10,5 @@ public class Huy2hApplication {
 		SpringApplication.run(Huy2hApplication.class, args);
 	}
 
+
 }
