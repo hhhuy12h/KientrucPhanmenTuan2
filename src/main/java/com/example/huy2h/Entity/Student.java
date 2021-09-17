@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import javax.validation.constraints.NotBlank;
+import org.hibernate.validator.constraints.Length;
+
 
 import javax.persistence.*;
 
@@ -19,6 +22,9 @@ public class Student {
     private long id;
 
     @Column(name = "first_name")
+    @NotBlank(message = "Please add first name!")
+    @Length(max = 10, min= 1, message = "less than ten and greater than one")
+
     private String first_name;
 
     @Column(name = "last_name")
